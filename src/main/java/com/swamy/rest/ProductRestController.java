@@ -20,7 +20,7 @@ public class ProductRestController {
 
 	@GetMapping("/one/{pid}")
 	public Product getOneProduct(@PathVariable Integer pid) {
-
+		//Product prodObj = productRepository.getOneProduct(pid);
 		Product p = new Product(99, "TV", 58000.00);
 
 		Link link = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(ProductRestController.class).getAllProducts())
